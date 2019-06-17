@@ -8,4 +8,4 @@ trigger:
 
 steps:
 - script: dotnet build
-- script: dotnet run --project ./Selenium_C_Sharp/Selenium_C_Sharp/Selenium_C_Sharp.csproj
+- script: dotnet run --project ./Selenium_C_Sharp/Selenium_C_Sharp.csproj
