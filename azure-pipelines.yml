@@ -7,10 +7,13 @@ trigger:
 - master
 
 steps:
-- task: CmdLine@2
+- task: DotNetCoreCLI@2
+  displayName: Build
   inputs:
-    script: 'dotnet build' 
+    command: build
+    projects: '**/*.csproj'
 
-- task: CmdLine@2
+- task: DotNetCoreCLI@2
   inputs:
-    script: 'dotnet run'
+    command: run
+    projects: '**/*.cs'
