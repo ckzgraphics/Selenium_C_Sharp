@@ -7,9 +7,10 @@ trigger:
 - master
 
 steps:
-- script: Building the CS project . . .
-  displayName: 'dotnet build'
+- task: CmdLine@2
+  inputs:
+    script: 'dotnet build' 
 
-- script: |
-    echo Running the test now . . .
-  displayName: 'dotnet run'
+- task: CmdLine@2
+  inputs:
+    script: 'dotnet run'
