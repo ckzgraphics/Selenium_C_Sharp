@@ -6,6 +6,13 @@
 trigger:
 - master
 
+
 steps:
+- powershell:
+  env:
+    BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
+    BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
+
 - script: dotnet build
+
 - script: dotnet run --project ./Selenium_C_Sharp/Selenium_C_Sharp.csproj
