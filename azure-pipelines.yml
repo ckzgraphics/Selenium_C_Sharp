@@ -13,6 +13,6 @@ steps:
     BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
     BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
 
-- script: dotnet build
+- script: pwd && dotnet build
 
-- script: dotnet run --project ./Selenium_C_Sharp/Selenium_C_Sharp.csproj
+- script: pwd && dotnet run --project ./Selenium_C_Sharp/Selenium_C_Sharp.csproj
